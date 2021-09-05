@@ -11,5 +11,5 @@ jobs:
       run: pwd; tree
     - uses: actions/upload-artifact@v2
       with:
-			  name: my-artifact
-			  path: ./staging/
+        name: my-artifact
+        path: ./staging/
