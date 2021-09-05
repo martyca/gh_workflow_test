@@ -6,7 +6,7 @@ jobs:
     - name: Create_Staging_Directory
       run: mkdir -p ./staging
     - name: Create_File
-      run: echo "the quick brown for jumped over the lazy dog!" > .staging/file.txt
+      run: echo 'the quick brown for jumped over the lazy dog!' > ./staging/file.txt
     - name: Show_Contents
       run: pwd; tree
     - name: Upload_Artifact
