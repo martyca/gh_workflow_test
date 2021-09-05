@@ -1,12 +1,10 @@
 on: [workflow_dispatch, push]
-env:
-  
 jobs:
   create_cruft:
     runs-on: ubuntu-latest
     steps:
     - name: Check out my other private repo
-      run: git clone https://martyca:${{ secrets.SECRET_KEY }}@github.com/martyca/workflow_target
+      run: git clone https://martyca:${{ secrets.PAT }}@github.com/martyca/workflow_target
     - name: Create_Staging_Directory
       run: mkdir -p ./staging
     - name: Create_File
