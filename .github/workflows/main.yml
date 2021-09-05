@@ -9,8 +9,7 @@ jobs:
       run: dd if=/dev/zero of=./staging/dummy bs=1024 count=1024
     - name: Show_Contents
       run: pwd; tree
-    - name: Upload_Articaft
-		  uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v2
 			with:
 				name: my-artifact
 				path: ./staging/
