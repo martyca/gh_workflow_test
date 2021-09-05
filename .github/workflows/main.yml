@@ -3,16 +3,18 @@ jobs:
   create_cruft:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out my other private repo
-      run: git clone https://martyca:${{ secrets.PAT }}@github.com/martyca/workflow_target
+#    - name: Check out my other private repo
+#      run: git clone https://martyca:${{ secrets.PAT }}@github.com/martyca/workflow_target
     - name: Create_Staging_Directory
       run: mkdir -p ./staging
     - name: Create_File
       run: echo 'the quick brown for jumped over the lazy dog!' > ./staging/file.txt
     - name: Show_Contents
       run: pwd; tree
-    - name: Upload_Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: my-artifact
-        path: ./staging/
+    - name: show env vars
+      run: set
+#    - name: Upload_Artifact
+#      uses: actions/upload-artifact@v2
+#      with:
+#        name: my-artifact
+#        path: ./staging/
