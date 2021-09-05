@@ -3,6 +3,11 @@ jobs:
   create_cruft:
     runs-on: ubuntu-latest
     steps:
+		- name: Check out my other private repo
+			uses: actions/checkout@v2
+			with:
+				repository: martyca/workflow_target
+        path: workflow_target
     - name: Create_Staging_Directory
       run: mkdir -p ./staging
     - name: Create_File
