@@ -6,7 +6,7 @@ jobs:
     - name: Create_Staging_Directory
       run: mkdir -p ./staging
     - name: Create_File
-      run: dd if=/dev/zero of=./staging/dummy bs=1024 count=1024
+      run: echo "the quick brown for jumped over the lazy dog!" > file.txt
     - name: Show_Contents
       run: pwd; tree
     - name: Upload_Artifact
