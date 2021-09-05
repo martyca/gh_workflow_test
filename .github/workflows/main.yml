@@ -1,0 +1,11 @@
+on: [workflow_dispatch, push]
+jobs:
+  create_cruft:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create_Staging_Directory
+      run: mkdir -p ./staging
+    - name: Create_File
+      run: dd if=/dev/zero of=./staging/dummy bs=1024 count=1024
+    - name: Show_Contents
+      run: pwd; tree
