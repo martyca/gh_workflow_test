@@ -13,3 +13,5 @@ jobs:
       - name: git status
         id: gitstatus
         run: git status
+      - name: git diff
+        run: git diff --name-only @~..@
