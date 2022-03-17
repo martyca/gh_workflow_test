@@ -9,4 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      run: git status
+      - name: git status
+        id: gitstatus
+        run: git status
